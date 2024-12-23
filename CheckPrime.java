@@ -3,15 +3,15 @@ import java.util.Scanner;
 
 public class CheckPrime {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a number: ");
-        int n = scan.nextInt();
-        if (prime(n)) {
-            System.out.println("It is a prime number");
-        } else {
-            System.out.println("Number is not prime");
+        try (Scanner scan = new Scanner(System.in)) {
+            System.out.println("Enter a number: ");
+            int n = scan.nextInt();
+            if (prime(n)) {
+                System.out.println("It is a prime number");
+            } else {
+                System.out.println("Number is not prime");
+            }
         }
-        scan.close();
     }
 
     static boolean prime (int n) {
