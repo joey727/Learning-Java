@@ -23,6 +23,7 @@ class Book implements Serializable {
 }
 
 public class SerializationDemo {
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
