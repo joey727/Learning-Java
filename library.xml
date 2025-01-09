@@ -1,0 +1,16 @@
+<library>
+    <book>
+        <title>Java Programming</title>
+        <author>John Doe</author>
+        <price>19.99</price>
+    </book>
+    <book>
+        <title>Python Programming</title>
+        <author>Jane Doe</author>
+        <price>29.99</price>
+    </book>
+    <book>
+        <title>JavaScript Programming</title>
+        <author>James Doe</author>
+        <price>39.99</price>
+</library>
