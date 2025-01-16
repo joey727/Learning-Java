@@ -2,6 +2,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class JdbcPreparedStatement {
+    @SuppressWarnings("UseSpecificCatch")
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the name of the student: ");
@@ -13,7 +14,7 @@ public class JdbcPreparedStatement {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "rootAdmin");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "root");
             PreparedStatement stmt = con.prepareStatement("insert into student values(?, ?, ?)");
             stmt.setInt(1, roll);
             stmt.setString(2, name);
@@ -24,7 +25,7 @@ public class JdbcPreparedStatement {
             con.close();
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 }
